@@ -1,0 +1,35 @@
+.home-container{
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    margin-top: 1rem;
+    background-color: blue;
+    width: 81vw;
+    height: 95vh;
+    border-radius: 1rem;
+}
+
+.home-title{
+    display: flex;
+    align-self: center;
+    height: 3rem;
+}
+
+.all-cards-container{
+    display: flex;
+    gap: 3rem;
+    width: 78vw;
+    flex-wrap: wrap;
+}
+
+.card-container{
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+    background-color: aqua;
+    margin-top: 2rem;
+}
+

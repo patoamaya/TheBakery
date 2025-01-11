@@ -19,7 +19,7 @@ home: async(req, res)=>{
     
 },
 
-list: async(req, res) =>{
+q: async(req, res) =>{
     try{
     const {categoria} = req.query
     const filteredCategory = await CakeModel.find({categoria: categoria})

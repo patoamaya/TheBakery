@@ -6,7 +6,7 @@ const upload = require('../middleware/Storage')
 // Vistas de vendedor
 router.get('/', OwnerController.home)
 
-router.get('/list', OwnerController.list)
+router.get('/q', OwnerController.q)
 
 router.get('/detail/:id', OwnerController.detail)
 
