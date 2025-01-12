@@ -1,11 +1,17 @@
 import React from 'react'
 
-const Delete = () => {
-    return (
-        <div>
-            <h2>Delete</h2>
-        </div>
-    )
-}
+const Delete = ({data}) => {
+const {tamano, nombre, categoria} = data
+ {
+    return(
+                <div>
+                <h2>{nombre}</h2>
+                </div>
+            )
+        }
+    }
+
+        
+    
 
 export default Delete

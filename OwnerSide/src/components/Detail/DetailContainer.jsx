@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Detail from './Detail'
+import { useParams } from 'react-router-dom'
+import axios from 'axios'
 
 const DetailContainer = () => {
+    const [data, setData] = useState({})
+    const {_id} = useParams()
+    useEffect(()=>{
+        axios.get(`http://localhost:2000/detail/${_id}`)
+        .then((res)=>setData(res.data))
+        .catch((err)=>console.log(err))
+    },[_id])
     return (
         <div>
-            <Detail/>
+            <Detail data={data}/>
         </div>
     )
 }

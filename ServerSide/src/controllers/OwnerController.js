@@ -36,7 +36,7 @@ q: async(req, res) =>{
 detail: async(req, res)=>{
     try{
         let {id} = req.params
-        const findById = CakeModel.findById(id)
+        const findById = await CakeModel.findById(id)
         res.send(findById)
     }catch(err){
        return res.status(400).json({
@@ -132,11 +132,12 @@ update: async(req, res)=>{
                     })
                 })
             )
+            console.log("Imagenes subidas correctamente:", imgUrls)
+            ultimateImages = [...ultimateImages, ...imgUrls]
         }catch(err){
             console.log("Error al subir imágenes a Cloudinary:", err)
             return res.status(500).json({ message: "Error al subir imágenes" })
         }
-            console.log(`Imagenes subidas correctamente ${imgUrls}`)
             newImages = newImages.filter(img => img && img.url && img.public_id)
             
             const updatedCake = {

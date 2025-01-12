@@ -1,9 +1,10 @@
 import React from 'react'
 import './Detail.css'
-const Detail = () => {
+const Detail = ({data}) => {
+    const {nombre, _id} = data  
     return (
         <div>
-            <h2>Detail</h2>
+            <h2>{nombre}</h2>
         </div>
     )
 }

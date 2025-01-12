@@ -1,9 +1,10 @@
 import React from 'react'
 
-const Update = () => {
+const Update = ({data}) => {
+    const {nombre} = data
     return (
         <div>
-            <h2>Update</h2>
+            <h2>{nombre}</h2>
         </div>
     )
 }

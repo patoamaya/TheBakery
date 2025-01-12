@@ -19,9 +19,9 @@ function App() {
       <Route path='/' element={<HomeContainer/>}/>
       <Route path="/category/:categoria?" element={<ListContainer/>} />
       </Route>
-      <Route path="/update/:id?" element={<UpdateContainer/>} />
-      <Route path="/detail/:id?" element={<DetailContainer/>} />
-      <Route path="/delete/id?" element={<DeleteContainer />} />
+      <Route path="/update/:_id?" element={<UpdateContainer/>} />
+      <Route path="/detail/:_id" element={<DetailContainer/>} />
+      <Route path="/delete/:_id?" element={<DeleteContainer />} />
       <Route path="/add" element={<AddContainer />} />
     </Routes>
     </BrowserRouter>
