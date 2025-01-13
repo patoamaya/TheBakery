@@ -19,6 +19,11 @@ const Update = ({data, handleSubmit, handleImageChange, imgsPreview}) => {
     return (
         <div className='update-container'>
             <h2 className='update-title'>Editar propiedad</h2>
+            <div className="update-back-btn">
+          <Button variant="contained" color="primary"  className='add-back-btn' onClick={()=>navigate(-1)}>
+            Atras
+          </Button>
+        </div>
             <form encType='multipart/form-data' onSubmit={handleSubmit} className='update-form'>
             
         <TextField
