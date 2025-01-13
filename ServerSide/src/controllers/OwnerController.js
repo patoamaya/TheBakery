@@ -83,7 +83,7 @@ add: async(req, res)=>{
             descripcion,
             rinde,
             categoria,
-            // imagenes: imagenUrls
+            imagenes: imagenUrls
             
         })
         

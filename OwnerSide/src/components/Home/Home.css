@@ -2,11 +2,14 @@
     display: flex;
     flex-direction: column;
     padding-left: 2rem;
-    margin-top: 1rem;
+    padding-bottom: 1rem;
     background-color: blue;
     width: 81vw;
-    height: 95vh;
+    min-height: 100vh;
     border-radius: 1rem;
+    margin-left: -1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .home-title{
@@ -23,7 +26,7 @@
 }
 
 .card-container{
-    width: 15rem;
+    width: 14rem;
     height: 15rem;
     display: flex;
     flex-direction: column;

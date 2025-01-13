@@ -1,0 +1,48 @@
+.list-container{
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+    background-color: blue;
+    width: 81vw;
+    min-height: 100vh;
+    border-radius: 1rem;
+    margin-left: -1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.list-title{
+    display: flex;
+    align-self: center;
+    height: 3rem;
+}
+
+.all-cards-container{
+    display: flex;
+    gap: 3rem;
+    width: 78vw;
+    flex-wrap: wrap;
+}
+
+.card-container{
+    width: 14rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+    background-color: aqua;
+    margin-top: 2rem;
+}
+
+.card-links{
+    display: flex;
+    gap: 1rem;
+}
+
+.card-link{
+    text-decoration: none;
+    
+}
+

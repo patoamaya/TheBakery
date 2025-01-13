@@ -5,10 +5,10 @@ const Schema = mongoose.Schema
 const cakeModel = Schema({
         precio: {type: Number, required: true},
         nombre: {type: String, required: true},
-        tamano: {type: Number, required: true},
+        tamano: {type: Number},
         descripcion: {type: String, required: true},
         rinde: {type: Number, required: true},
-        categoria: {type: String, required: true}, //Preguntar a lu qué cosas querría acá (tortas, budines, postres, salados, etc )
+        categoria: {type: String, required: true}, 
         imagenes: [{ url: String, public_id: String }], 
         createdAt: {type: Date, default: Date.now} 
 

@@ -1,11 +1,11 @@
 import React from 'react'
 import './Home.css'
 import {Link} from 'react-router-dom'
-const Home = ({data}) => {
-    console.log(data)
+import Button from '@mui/material/Button'
+const Home = ({data, deleteAlert}) => {
     return (
         <main className='home-container'>
-            <h1 className='home-title'>Productos</h1>
+            <h1 className='home-title'>Todos los productos</h1>
 
         <div className='all-cards-container'>
             {
@@ -23,7 +23,10 @@ const Home = ({data}) => {
                         </Link>
             <div className="card-links">
                  <Link to={`/update/${_id}`} className="card-link"> <p >Editar</p></Link>
-                 <Link to={`/delete/${_id}`} className="card-link"> <p>Eliminar</p></Link>
+                 {/* <Link to={`/delete/${_id}`} className="card-link"> <p>Eliminar</p></Link> */}
+                 <Button variant="contained" color="error" onClick={(e)=>deleteAlert(_id, nombre)}>
+                   Eliminar
+                 </Button>
             </div>
          </div>
 )
