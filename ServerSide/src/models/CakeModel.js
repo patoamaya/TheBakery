@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const cakeModel = Schema({
-        precio: {type: Number, required: true},
+        precio: {type: Number},
         nombre: {type: String, required: true},
         tamano: {type: Number},
         descripcion: {type: String, required: true},
