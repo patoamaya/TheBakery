@@ -3,12 +3,12 @@ import './Update.css'
 import { InputLabel, MenuItem, Select, FormControl } from '@mui/material'
 import Button from '@mui/material/Button'
 import TextField from '@mui/material/TextField'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 
 
 const Update = ({data, handleSubmit, handleImageChange, imgsPreview}) => {
 
-  
+  const navigate = useNavigate()
   let {nombre, setNombre,
        precio, setPrecio,
        tamano, setTamano,
@@ -183,13 +183,13 @@ const Update = ({data, handleSubmit, handleImageChange, imgsPreview}) => {
             }}
         />
     
-      <div className="desc-img-container">
+      <div className="update-desc-img-container">
       <fieldset className='update-img-input'>
         <ul>
           <li><p>Máximo 2 imagenes</p></li>
           <li><p>La primer imagen seleccionada será elegida como portada</p></li>
           <li><p>Se recomienda elegir imagenes capturadas en formato horizontal</p></li>
-          <li><p>Tamaño máximo por imagen: 25mb</p></li>
+          <li><p>Tamaño máximo por imagen: 10mb</p></li>
         </ul>
         <legend>Seleccionar imagenes</legend>
       <input type="file" name="imagenes"  placeholder='Imágenes' multiple onChange={handleImageChange} className='update-searchImages-input' />

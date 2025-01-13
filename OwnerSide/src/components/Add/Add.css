@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     /* min-height: 120vh; */
-    height: 143vh;
+    height: 150vh;
     width: 100%;
     align-items: center;
     background-color: rgb(117, 155, 82);
@@ -114,7 +114,7 @@ margin-left: 1rem;
     align-items: center;
     width: 100%;
     gap:1rem;
-
+    margin-bottom: -6rem;
 }
 
 .add-input-desc{

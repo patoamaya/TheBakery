@@ -8,7 +8,8 @@
     min-height: 100vh;
     height: fit-content;
     gap: 2.3rem;
-    background-color: red;
+    background-image: url(../../assets/background.jpg);
+    background-size:contain;
  
 }
 
@@ -18,7 +19,7 @@
     align-items: center;
     width: 9rem;
     height: fit-content;
-    background-color: grey;
+    background-color: rgba(205, 32, 221, 0.527);
     padding: 1rem .5rem;
     gap: 1rem;
     margin-left: 1rem;
@@ -54,5 +55,5 @@ margin-bottom: .5rem;
 .sidebar-container ul li a:hover{
     font-size: 1.4rem;
     transition: all.3s;
-    color: pink;
+    color: rgb(238, 84, 109);
 }

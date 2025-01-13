@@ -84,14 +84,15 @@ const AddContainer = () => {
         }
       } catch (error) {
         console.error('Error al enviar el formulario:', error);
-      }
-  
+        error.response.data.error.includes(10485760) &&
+          Swal.fire({
+            title: "Imagen muy grande",
+            text: "Recuerde que no debe superar los 10mb",
+            icon: "error"
+          });
+        }  
     };
-  
-  
-   
-  
-        return(
+          return(
           <div>
             <Add
              handleChange = {handleChange}

@@ -48,7 +48,6 @@ const Add = ({handleImageChange, handleChange, data, handleSubmit, imgsPreview})
             helperText={precio.length > 0 ? "" : "Agregue un valor"}
             type='number'
             onChange={handleChange}
-            required
             color='primary'
             sx={{
               '& .MuiInputBase-root': {
@@ -113,7 +112,7 @@ const Add = ({handleImageChange, handleChange, data, handleSubmit, imgsPreview})
             name='tamano'
             label="Tamaño"
             helperText={tamano.length > 0 ? "" : "Agregue el tamaño"}
-            value={categoria === 'torta' || categoria === 'budin' || categoria.length === 0  ? tamano : "" }
+            value={categoria === 'torta' || categoria === 'budin' || categoria.length === 0  ? tamano : 404 }
             onChange={handleChange}
             color='primary'
             sx={{
@@ -180,7 +179,7 @@ const Add = ({handleImageChange, handleChange, data, handleSubmit, imgsPreview})
           <ul>
             <li><p>Máximo 2 imagenes</p></li>
             <li><p>Se recomienda elegir imagenes capturadas en formato horizontal</p></li>
-            <li><p>Tamaño máximo por imagen: 25mb</p></li>
+            <li><p>Tamaño máximo por imagen: 10mb</p></li>
           </ul>
           <legend>Seleccionar imagenes</legend>
         <input type="file" name="imagenes"  placeholder='Imágenes' multiple onChange={handleImageChange} className='add-searchImages-input' />

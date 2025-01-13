@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mui/icons-material": "^6.3.1",
     "axios": "^1.7.9",
     "ownerside": "file:",
     "react": "^18.3.1",

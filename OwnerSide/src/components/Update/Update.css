@@ -131,14 +131,15 @@
     border-bottom: 5px solid red;
     align-self: center;
 }
-.desc-img-container{
+.update-desc-img-container{
     display: flex;
     padding-top: 1rem;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    gap:1rem
+    gap:1rem;
+    margin-bottom: 1rem;
 }
 
 .update-input-desc{
@@ -212,5 +213,6 @@
     padding: 5px;
     border-radius: 5px;
     background-color: red;
+
 }
 
