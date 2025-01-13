@@ -113,9 +113,8 @@ const Add = ({handleImageChange, handleChange, data, handleSubmit, imgsPreview})
             name='tamano'
             label="Tamaño"
             helperText={tamano.length > 0 ? "" : "Agregue el tamaño"}
-            value={tamano || categoria === 'torta' || categoria === 'budin' || categoria.length === 0  ? tamano : ""}
+            value={categoria === 'torta' || categoria === 'budin' || categoria.length === 0  ? tamano : "" }
             onChange={handleChange}
-            // required
             color='primary'
             sx={{
               '& .MuiInputBase-root': {
@@ -187,15 +186,15 @@ const Add = ({handleImageChange, handleChange, data, handleSubmit, imgsPreview})
         <input type="file" name="imagenes"  placeholder='Imágenes' multiple onChange={handleImageChange} className='add-searchImages-input' />
         </fieldset>
         
-        <div className={imgsPreview.length != 0 && imgsPreview.length <= 10? "add-imgs-container" : "no-imgs-container"}>    
+        <div className={imgsPreview.length != 0 && imgsPreview.length <= 2? "add-imgs-container" : "no-imgs-container"}>    
         {
           imgsPreview.length === 0 
             ? <h2 className='add-img-input-length'>Imagenes a cargar</h2>
-            : imgsPreview.length > 10 
-            ? <h1 className='add-img-input-length-error'>Ha excedido el límite de imagenes a subir: 10</h1>
+            : imgsPreview.length > 2 
+            ? <h1 className='add-img-input-length-error'>Ha excedido el límite de imagenes a subir: 2</h1>
             : null
         }
-          {imgsPreview.length > 0 && imgsPreview.length <=10 &&(
+          {imgsPreview.length > 0 && imgsPreview.length <=2 &&(
             <div className='preview-container'>
             {imgsPreview.map((img)=>(
               <img src={img} alt="" key={img} className='add-img' />
