@@ -11,43 +11,47 @@ const Home = ({data, deleteAlert}) => {
 
         <div className='all-cards-container'>
             {
-                data.length === 0 ? 
-                <div className="no-data">
+
+                    data.length === 0 ? 
+                    <div className="no-data">
                     <p>¡No hay nada aun!</p> 
                 </div>
                 :
                 data.map((dato)=>{
                     let {nombre, imagenes, _id} = dato
                     return(
-           <div className="card-container" key={_id}>
-                            <Link to={`/detail/${_id}`}>
-                            <div className="card-img-container">
-                                <img src={imagenes[0]?.url} alt="" className='card-img' />
-                            </div>
-                            <div className="card-info">
+                        <div className="card-container" key={_id}>
+                    <Link to={`/detail/${_id}`}>
+                        <div className="card-img-container">
+                            <img src={imagenes[0]?.url} alt="" className='card-img' />
+                        </div>
+                        <div className="card-info">
                             <h3>{nombre}</h3>  
-                            </div>
-                        </Link>
+                        </div>
+                    </Link>
             <div className="card-links">
                 
                 <Link to={`/update/${_id}`}>
-                <EditIcon
-                className="link-icon"
-                color="primary"
-                fontSize="large"
-                 /></Link>
+                    <EditIcon
+                        className="link-icon"
+                        color="primary"
+                        fontSize="large"
+                        />
+                </Link>
                 <DeleteIcon
-                className="link-icon"
-                color="error"
-                fontSize="large"
-                 onClick={(e)=>deleteAlert(_id, nombre)}/>
-                </div>
-                </div>
+                    className="link-icon"
+                    color="error"
+                    fontSize="large"
+                    onClick={()=>deleteAlert(_id, nombre)}/>
+            </div>
+    </div>
             
-            )
-        })
-        
+        )
     }
+
+)
+    
+}
     </div>
     </main>
     )
