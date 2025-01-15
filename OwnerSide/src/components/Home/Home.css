@@ -12,10 +12,25 @@
     margin-bottom: 1rem;
 }
 
+.loader{
+    display: flex;
+    flex-direction: column;
+    margin: 15% 40%;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.loader p{
+    margin-top:-2rem;
+    color: antiquewhite;
+    font-size: 2rem;
+}
 .home-title{
     display: flex;
     align-self: center;
     margin-top: 1rem;
+    border-bottom: 2px solid black;
 }
 
 .all-cards-container{
@@ -44,7 +59,7 @@
     border-top-right-radius: 2rem;
     border-bottom-left-radius: .3rem;
     border-bottom-right-radius: .3rem;
-    background-color: rgba(116, 116, 116, 0.205);
+    background-color: rgba(116, 116, 116, 0.329);
     box-shadow: rgba(41, 40, 40, 0.185) .2rem .25rem;
     margin-top: 2rem;
 }
@@ -65,6 +80,15 @@
 .link-icon{
     text-decoration: none;
     cursor: pointer;
+}
+
+.link-icon:hover{
+    background-color: rgba(206, 6, 156, 0.295);
+    border-top-right-radius: 25%;
+    border-top-left-radius: 25%;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    transition: .4s;
 }
 
 
@@ -93,4 +117,17 @@
     margin-top: .2rem;
 
 
+}
+
+.page-container{
+    align-self: center;
+    margin-top: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    display: flex;
+}
+
+.disabled{
+    display: hidden;
 }

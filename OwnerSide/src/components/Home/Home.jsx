@@ -4,7 +4,10 @@ import {Link} from 'react-router-dom'
 import Button from '@mui/material/Button'
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
-const Home = ({data, deleteAlert}) => {
+import {Hearts} from 'react-loader-spinner'
+
+const Home = ({data, pageData, deleteAlert}) => {
+    let {handlePageChange, currentPage, totalPages, loading} = pageData
     return (
         <main className='home-container'>
             <h1 className='home-title'>Todos los productos</h1>
@@ -12,10 +15,26 @@ const Home = ({data, deleteAlert}) => {
         <div className='all-cards-container'>
             {
 
-                    data.length === 0 ? 
-                    <div className="no-data">
-                    <p>¡No hay nada aun!</p> 
-                </div>
+                //     data.length === 0 ? 
+                //     <div className="no-data">
+                //     <p>¡No hay nada aun!</p> 
+                // </div>
+
+                // :
+
+                loading ? 
+                <div className="loader">
+                <Hearts
+                    height="240"
+                    width="260"
+                    color="#f3f3f3"
+                    ariaLabel="hearts-loading"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    visible={true}
+                    />
+                    <p>Cargando...</p>
+                    </div>
                 :
                 data.map((dato)=>{
                     let {nombre, imagenes, _id} = dato
@@ -47,12 +66,26 @@ const Home = ({data, deleteAlert}) => {
     </div>
             
         )
+            
     }
-
+            
 )
+
     
 }
     </div>
+
+<div className={loading ? "disabled" : "page-container"}>
+<Button variant="contained" color="primary" onClick={()=>{handlePageChange(currentPage - 1)}}>
+  anterior
+</Button>
+
+<h3>{currentPage} / {totalPages}</h3>
+
+<Button variant="contained" color="primary" onClick={()=>{handlePageChange(currentPage + 1)}}  disabled={currentPage === totalPages}>
+  siguiente
+</Button>
+</div>
     </main>
     )
 }

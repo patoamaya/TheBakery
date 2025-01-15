@@ -18,7 +18,7 @@ const Update = ({data, handleSubmit, handleImageChange, imgsPreview}) => {
        imagenes, setImagenes} = data
     return (
         <div className='update-container'>
-            <h2 className='update-title'>Editar propiedad</h2>
+            <h2 className='update-title'>Editar producto</h2>
             <div className="update-back-btn">
           <Button variant="contained" color="primary"  className='add-back-btn' onClick={()=>navigate(-1)}>
             Atras
@@ -37,7 +37,7 @@ const Update = ({data, handleSubmit, handleImageChange, imgsPreview}) => {
           color='none'
           sx={{
             '& .MuiInputBase-root': {
-              backgroundColor: '#fffdbe9f'
+              backgroundColor: '#f3f39f'
             },
             '& .MuiInputLabel-root': {
               color: '#000000'
@@ -60,7 +60,7 @@ const Update = ({data, handleSubmit, handleImageChange, imgsPreview}) => {
         color='none'
         sx={{
         '& .MuiInputBase-root': {
-            backgroundColor: '#fffdbe9f'
+            backgroundColor: '#f3f39f'
         },
         '& .MuiInputLabel-root': {
             color: '#000000'
@@ -83,7 +83,7 @@ const Update = ({data, handleSubmit, handleImageChange, imgsPreview}) => {
                 color='primary'
                 sx={{
                     '& .MuiSelect-select': {
-                    backgroundColor: '#fffdbe9f',
+                    backgroundColor: '#f3f39f',
                     color: '#000000', 
                     },
                     '& .MuiInputLabel-root': {
@@ -125,7 +125,7 @@ const Update = ({data, handleSubmit, handleImageChange, imgsPreview}) => {
           color='none'
           sx={{
             '& .MuiInputBase-root': {
-              backgroundColor: '#fffdbe9f'
+              backgroundColor: '#f3f39f'
             },
             '& .MuiInputLabel-root': {
               color: '#000000'
@@ -148,7 +148,7 @@ const Update = ({data, handleSubmit, handleImageChange, imgsPreview}) => {
           color='none'
           sx={{
             '& .MuiInputBase-root': {
-              backgroundColor: '#fffdbe9f'
+              backgroundColor: '#f3f39f'
             },
             '& .MuiInputLabel-root': {
               color: '#000000'
@@ -172,7 +172,7 @@ const Update = ({data, handleSubmit, handleImageChange, imgsPreview}) => {
             color='primary'
             sx={{
                 '& .MuiInputBase-root': {
-                    backgroundColor: '#fffdbe9f'
+                    backgroundColor: '#f3f39f'
                 },
                 '& .MuiInputLabel-root': {
                     color: '#000000'
