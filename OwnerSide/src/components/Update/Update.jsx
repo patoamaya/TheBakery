@@ -15,12 +15,12 @@ const Update = ({data, handleSubmit, handleImageChange, imgsPreview}) => {
        rinde, setRinde,
        categoria, setCategoria,
        descripcion, setDescripcion,
-       imagenes, setImagenes} = data
+       imagenes} = data
     return (
         <div className='update-container'>
             <h2 className='update-title'>Editar producto</h2>
             <div className="update-back-btn">
-          <Button variant="contained" color="primary"  className='add-back-btn' onClick={()=>navigate(-1)}>
+          <Button variant="contained" color="secondary"  className='add-back-btn' onClick={()=>navigate(-1)}>
             Atras
           </Button>
         </div>
@@ -53,7 +53,7 @@ const Update = ({data, handleSubmit, handleImageChange, imgsPreview}) => {
         name='precio'
         label="Precio"
         value={precio ? precio : ""}
-        helperText={precio.length > 0 ? "" : "Agregue un valor"}
+        helperText={precio?.length > 0 ? "" : "Agregue un valor"}
         onChange={(e)=>setPrecio(e.target.value)}
         required
         type='number'
@@ -187,8 +187,6 @@ const Update = ({data, handleSubmit, handleImageChange, imgsPreview}) => {
       <fieldset className='update-img-input'>
         <ul>
           <li><p>Máximo 2 imagenes</p></li>
-          <li><p>La primer imagen seleccionada será elegida como portada</p></li>
-          <li><p>Se recomienda elegir imagenes capturadas en formato horizontal</p></li>
           <li><p>Tamaño máximo por imagen: 10mb</p></li>
         </ul>
         <legend>Seleccionar imagenes</legend>

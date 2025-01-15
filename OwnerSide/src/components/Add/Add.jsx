@@ -13,7 +13,7 @@ const Add = ({handleImageChange, handleChange, data, handleSubmit, imgsPreview})
         <div className='add-container'>
         <h2 className='add-title'>Agregar producto</h2>
         <div className="add-back-btn">
-          <Button variant="contained" color="primary"  className='add-back-btn' onClick={()=>navigate(-1)}>
+          <Button variant="contained" color="secondary"  className='add-back-btn' onClick={()=>navigate(-1)}>
             Atras
           </Button>
         </div>
@@ -30,7 +30,7 @@ const Add = ({handleImageChange, handleChange, data, handleSubmit, imgsPreview})
             color='primary'
             sx={{
               '& .MuiInputBase-root': {
-                backgroundColor: '#fffdbe9f'
+                backgroundColor: '#f3f39f'
               },
               '& .MuiInputLabel-root': {
                 color: '#000000'
@@ -51,7 +51,7 @@ const Add = ({handleImageChange, handleChange, data, handleSubmit, imgsPreview})
             color='primary'
             sx={{
               '& .MuiInputBase-root': {
-                backgroundColor: '#fffdbe9f'
+                backgroundColor: '#f3f39f'
               },
               '& .MuiInputLabel-root': {
                 color: '#000000'
@@ -77,17 +77,17 @@ const Add = ({handleImageChange, handleChange, data, handleSubmit, imgsPreview})
             color='primary'
             sx={{
               '& .MuiSelect-select': {
-                backgroundColor: '#fffdbe9f', // Color de fondo de la caja de texto
-                color: '#000000', // Color del texto dentro del select
+                backgroundColor: '#f3f39f', 
+                color: '#000000', 
               },
               '& .MuiInputLabel-root': {
-                color: '#000000', // Color de la etiqueta
+                color: '#000000',
               },
               '& .MuiOutlinedInput-notchedOutline': {
-                borderColor: '#000000', // Color del borde
+                borderColor: '#000000', 
               },
               '& .MuiSelect-icon': {
-                color: '#000000', // Color de la flecha del Select
+                color: '#000000', 
               }
             }}
             >
@@ -117,7 +117,7 @@ const Add = ({handleImageChange, handleChange, data, handleSubmit, imgsPreview})
             color='primary'
             sx={{
               '& .MuiInputBase-root': {
-                backgroundColor: '#fffdbe9f'
+                backgroundColor: '#f3f39f'
               },
               '& .MuiInputLabel-root': {
                 color: '#000000'
@@ -139,7 +139,7 @@ const Add = ({handleImageChange, handleChange, data, handleSubmit, imgsPreview})
             color='primary'
             sx={{
               '& .MuiInputBase-root': {
-                backgroundColor: '#fffdbe9f'
+                backgroundColor: '#f3f39f'
               },
               '& .MuiInputLabel-root': {
                 color: '#000000'
@@ -164,7 +164,7 @@ const Add = ({handleImageChange, handleChange, data, handleSubmit, imgsPreview})
             color='primary'
             sx={{
               '& .MuiInputBase-root': {
-                  backgroundColor: '#fffdbe9f'
+                  backgroundColor: '#f3f39f'
               },
               '& .MuiInputLabel-root': {
                   color: '#000000'
@@ -178,7 +178,6 @@ const Add = ({handleImageChange, handleChange, data, handleSubmit, imgsPreview})
         <fieldset className='add-img-input'>
           <ul>
             <li><p>Máximo 2 imagenes</p></li>
-            <li><p>Se recomienda elegir imagenes capturadas en formato horizontal</p></li>
             <li><p>Tamaño máximo por imagen: 10mb</p></li>
           </ul>
           <legend>Seleccionar imagenes</legend>

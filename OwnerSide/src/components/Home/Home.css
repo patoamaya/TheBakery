@@ -73,8 +73,6 @@
 .card-links{
     display: flex;
     gap: 9rem;
-    padding-top: .5rem;
-    /* margin-bottom: .5rem; */
 }
 
 .link-icon{

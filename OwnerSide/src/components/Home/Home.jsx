@@ -75,19 +75,19 @@ const Home = ({data, pageData, deleteAlert}) => {
 }
     </div>
 
-<div className={loading ? "disabled" : "page-container"}>
-<Button variant="contained" color="primary" onClick={()=>{handlePageChange(currentPage - 1)}}>
-  anterior
-</Button>
+    <div className={loading ? "disabled" : "page-container"}>
+        <Button variant="contained" color="secondary" onClick={()=>{handlePageChange(currentPage - 1)}}>
+        anterior
+        </Button>
 
-<h3>{currentPage} / {totalPages}</h3>
+            <h3>{currentPage} / {totalPages}</h3>
 
-<Button variant="contained" color="primary" onClick={()=>{handlePageChange(currentPage + 1)}}  disabled={currentPage === totalPages}>
-  siguiente
-</Button>
-</div>
-    </main>
-    )
+        <Button variant="contained" color="secondary" onClick={()=>{handlePageChange(currentPage + 1)}}  disabled={currentPage === totalPages}>
+        siguiente
+        </Button>
+    </div>
+</main>
+        )
 }
 
 export default Home
