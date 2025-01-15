@@ -6,9 +6,21 @@ const cloudinary = require("../utils/Cloudinary")
 const OwnerController = {
 
 home: async(req, res)=>{
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 8;
     try{
         const findAll = await CakeModel.find()
-        res.send(findAll)
+        .skip((page-1) * limit)
+        .limit(limit)
+
+        const totalCakes = await CakeModel.countDocuments()
+
+
+        res.json({
+            findAll,
+            totalPages: Math.ceil(totalCakes / limit),
+            currentPage: page
+        })
     }catch(err){
         res.status(500) || res.status(400)
         .json({
