@@ -15,7 +15,7 @@ const Sidebar = () => {
                 <li><Link to="/category/budin" className='sidebar-link'>Budines</Link></li>
             </ul>
             <p className='sidebar-title'>Especiales</p>
-            <ul>
+            <ul className="sidebar-ul2">
                 <li><Link to="/category/navidad" className='sidebar-link'>Navidad</Link> </li>
                 <li><Link to="/category/reyes" className='sidebar-link'>Reyes</Link> </li>
                 <li><Link to="/category/pascua" className='sidebar-link'>Pascua</Link> </li>

@@ -5,7 +5,7 @@
 .sidebar-container-all{
     display: flex;
     width: 100%;
-    min-height: 100vh;
+    min-height: 130vh;
     height: fit-content;
     gap: 2.3rem;
     background-image: url(../../assets/background.jpg);
@@ -18,10 +18,10 @@
     flex-direction: column;
     align-items: center;
     width: 9rem;
-    height: fit-content;
+    height: 141vh;
     background-color: rgba(205, 32, 221, 0.527);
     padding: 1rem .5rem;
-    gap: 1rem;
+    gap: 1.5rem;
     margin-left: 1rem;
     margin-top: 1rem;
     border-radius: 1rem;
@@ -39,8 +39,16 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-left: 2rem;
+    gap: .5rem;
+    /* margin-left: 1rem; */
     /* background-color: red; */
+}
+
+.sidebar-ul2{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .sidebar-container ul li a{

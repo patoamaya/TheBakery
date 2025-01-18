@@ -15,12 +15,6 @@ const Home = ({data, pageData, deleteAlert}) => {
         <div className='all-cards-container'>
             {
 
-                //     data.length === 0 ? 
-                //     <div className="no-data">
-                //     <p>¡No hay nada aun!</p> 
-                // </div>
-
-                // :
 
                 loading ? 
                 <div className="loader">
@@ -76,7 +70,7 @@ const Home = ({data, pageData, deleteAlert}) => {
     </div>
 
     <div className={loading ? "disabled" : "page-container"}>
-        <Button variant="contained" color="secondary" onClick={()=>{handlePageChange(currentPage - 1)}}>
+        <Button variant="contained" color="secondary" onClick={()=>{handlePageChange(currentPage - 1)}}disabled={currentPage === 1}>
         anterior
         </Button>
 

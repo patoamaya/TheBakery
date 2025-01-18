@@ -72,7 +72,7 @@ const Update = ({data, handleSubmit, handleImageChange, imgsPreview}) => {
     />
 
     <FormControl variant="outlined" sx={{ minWidth: 120 }}>
-        <InputLabel id="ciudad">Ciudad</InputLabel>
+        <InputLabel id="categoria">Categoria</InputLabel>
             <Select
                 className='post-input'
                 id="categoria"
@@ -220,7 +220,7 @@ const Update = ({data, handleSubmit, handleImageChange, imgsPreview}) => {
           Cancelar
         </Button>
         </Link>
-        {imgsPreview.length > 2 ? <h2 className='error-btn-'>Límite de imagenes excedido</h2> : <Button variant="contained" color="primary" type='submit' >
+        {imgsPreview.length > 2 ? <h2 className='error-btn-'>Límite de imagenes excedido</h2> : <Button variant="contained" color="primary" type='submit' className='submit-btn' >
           Actualizar propiedad
         </Button>}
         </div>
@@ -230,4 +230,3 @@ const Update = ({data, handleSubmit, handleImageChange, imgsPreview}) => {
 }
 
 export default Update
-

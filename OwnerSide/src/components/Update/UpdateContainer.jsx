@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react'
 import Update from './Update'
 import axios from 'axios'
 import {useNavigate, useParams} from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 const UpdateContainer = () => {
     const navigate = useNavigate();
     const {_id} = useParams();
     
-    const [imgsPreview, setImgsPreview] = useState('');
+    const [imgsPreview, setImgsPreview] = useState([]);
     const [nombre, setNombre] = useState('');
     const [precio, setPrecio] = useState('');
     const [tamano, setTamano] = useState('');
@@ -35,11 +36,11 @@ useEffect(()=>{
 const handleImageChange = (e)=>{
     const images = e.target.files
     const imagesPreview = []
-    for(let i = 0 ; i > images.length ; i+=1 ){
+    for(let i = 0 ; i < images.length ; i+=1 ){
         const image = images[i]
         const reader = new FileReader()
 
-        reader.onloaend = ()=>{
+        reader.onload = ()=>{
             imagesPreview.push(reader.result)
             if(imagesPreview.length === images.length){
                 setImgsPreview(imagesPreview)
@@ -63,21 +64,42 @@ const handleSubmit = (e)=>{
     formData.append('categoria', categoria)
     formData.append('descripcion', descripcion)
 
-    if (imagenes && imagenes.length > 0) {
+    if (imagenes && imagenes.length > 0 && imagenes.length <= 2) {
+        
         for (let i = 0; i < imagenes.length; i++) {
             formData.append('imagenes', imagenes[i])
         }
+    }else{
+        console.log("error")
     }
-    axios.patch(`http://localhost:2000/seller/update/${_id}`, formData, {
-        headers: {
-            'Content-Type': 'multipart/form-data'
-        }
-    })
-    .then(() => {
-        console.log("Editado con éxito")
-        navigate("/home")
-    })
-    .catch((err) => { console.log(err) })
+    try{
+
+        axios.patch(`http://localhost:2000/seller/update/${_id}`, formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        })
+        .then(() => {
+            console.log("Editado con éxito")
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "Su producto ha sido editado satisfactoriamente",
+                timer: 1500
+              });
+              
+            navigate("/")
+        })
+        .catch((err) => { console.log(err) })
+    }catch{
+        console.log("Se ha producido un error")
+        Swal.fire({
+            icon: "error",
+            title: "Error al editar la propiedad",
+          });
+          
+
+    }
 }
 
 let data = {
