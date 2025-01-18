@@ -58,14 +58,10 @@ const Home = ({data, pageData, deleteAlert}) => {
                     onClick={()=>deleteAlert(_id, nombre)}/>
             </div>
     </div>
-            
-        )
-            
-    }
-            
+        )   
+    }       
 )
 
-    
 }
     </div>
 
