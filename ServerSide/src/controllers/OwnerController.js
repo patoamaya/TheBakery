@@ -113,64 +113,142 @@ add: async(req, res)=>{
     }
 },
 
-update: async(req, res)=>{
-    const _id = req.params.id
-    const {precio, nombre, tamano, descripcion, rinde } = req.body
+// update: async(req, res)=>{
+//     const _id = req.params.id
+//     const {precio, nombre, tamano, descripcion, rinde, categoria } = req.body
     
-    const existingCake = await CakeModel.findById(_id)
-    const newImages = existingCake ? existingCake.imagenes : []
+//     const existingCake = await CakeModel.findById(_id)
+//     let ultimateImages = existingCake ? existingCake.imagenes : []
     
-    if(!req.files || req.files.length === 0){
-    }else{
-        try{
-            const imgUrls = await Promise.all(
-                req.files.map((file)=>{
-                    return new Promise((resolve, reject)=>{
-                        const uploadStream = cloudinary.uploader.upload_stream(
-                            { resource_type: 'auto' },  
-                            (err, result) => {
-                                if (err) {
-                                    console.log("Error al subir imagen a Cloudinary:", err)
-                                    reject(err);
-                                }
-                                console.log("Imagen subida con éxito a Cloudinary:", result)
-                                resolve({
-                                    url: result.secure_url,  // URL segura de la imagen
-                                    public_id: result.public_id  // ID público de la imagen
-                                })
-                            }
-                        )
-                        streamifier.createReadStream(file.buffer).pipe(uploadStream)       
-                    })
-                })
-            )
-            console.log("Imagenes subidas correctamente:", imgUrls)
-            ultimateImages = [...ultimateImages, ...imgUrls]
-        }catch(err){
-            console.log("Error al subir imágenes a Cloudinary:", err)
-            return res.status(500).json({ message: "Error al subir imágenes" })
-        }
-            newImages = newImages.filter(img => img && img.url && img.public_id)
+//     if(!req.files || req.files.length === 0){
+//     }else{
+//         try{
+//             const imgUrls = await Promise.all(
+//                 req.files.map((file)=>{
+//                     return new Promise((resolve, reject)=>{
+//                         const uploadStream = cloudinary.uploader.upload_stream(
+//                             { resource_type: 'auto' },  
+//                             (err, result) => {
+//                                 if (err) {
+//                                     console.log("Error al subir imagen a Cloudinary:", err)
+//                                     reject(err);
+//                                 }
+//                                 console.log("Imagen subida con éxito a Cloudinary:", result)
+//                                 resolve({
+//                                     url: result.secure_url,
+//                                     public_id: result.public_id 
+//                                 })
+//                             }
+//                         )
+//                         streamifier.createReadStream(file.buffer).pipe(uploadStream)       
+//                     })
+//                 })
+//             )
+//             console.log("Imagenes subidas correctamente:", imgUrls)
+//             ultimateImages = [...ultimateImages, ...imgUrls]
+//         }catch(err){
+//             console.log("Error al subir imágenes a Cloudinary:", err)
+//             return res.status(500).json({ message: "Error al subir imágenes" })
+//         }
+//         ultimateImages = ultimateImages.filter(img => img && img.url && img.public_id)
             
-            const updatedCake = {
-                precio,
-                nombre,
-                tamano,
-                descripcion,
-                rinde,
-                categoria,
-                imagenes: newImages
-            }
+//             const updatedCake = {
+//                 precio,
+//                 nombre,
+//                 tamano,
+//                 descripcion,
+//                 rinde,
+//                 categoria,
+//                 imagenes: ultimateImages
+//             }
 
-            try{
-                const updatedCakeDoc = await CakeModel.findOneAndUpdate({_id}, updatedCake, {new: true})
-                res.status(200).json({ message: 'Producto actualizado con éxito', updatedCake: updatedCakeDoc })
-            }catch(err){
-                console.log("Error al actualizar el producto:", err)
-                res.status(500).json({ message: 'Error al actualizar el producto' })
-            }
+//             try{
+//                 const updatedCakeDoc = await CakeModel.findOneAndUpdate({_id}, updatedCake, {new: true})
+//                 res.status(200).json({ message: 'Producto actualizado con éxito', updatedCake: updatedCakeDoc })
+//             }catch(err){
+//                 console.log("Error al actualizar el producto:", err)
+//                 res.status(500).json({ message: 'Error al actualizar el producto' })
+//             }
+//         }
+// },
+
+update: async (req, res) => {
+    const _id = req.params.id;
+    const { precio, categoria, tamano, descripcion, rinde, nombre } = req.body;
+  
+    const existingCake = await CakeModel.findById(_id);
+    let ultimateImages = existingCake ? existingCake.imagenes : [];
+  
+    // Si hay imágenes previas, eliminarlas de Cloudinary
+    if (existingCake && existingCake.imagenes) {
+      // Eliminar las imágenes anteriores de Cloudinary
+      await Promise.all(existingCake.imagenes.map(async (img) => {
+        try {
+          await cloudinary.uploader.destroy(img.public_id);
+          console.log(`Imagen eliminada de Cloudinary: ${img.public_id}`);
+        } catch (err) {
+          console.log("Error al eliminar imagen de Cloudinary:", err);
         }
-},
+      }));
+    }
+  
+    // Si no se han subido nuevas imágenes, mantenemos las anteriores
+    if (!req.files || req.files.length === 0) {
+      ultimateImages = existingCake.imagenes; // Mantener las imágenes anteriores
+    } else {
+      // Subir las nuevas imágenes a Cloudinary
+      try {
+        const imageUrls = await Promise.all(
+          req.files.map((file) => {
+            return new Promise((resolve, reject) => {
+              const uploadStream = cloudinary.uploader.upload_stream(
+                { resource_type: 'auto' },
+                (err, result) => {
+                  if (err) {
+                    console.log("Error al subir imagen a Cloudinary:", err);
+                    reject(err);
+                  }
+                  console.log("Imagen subida con éxito a Cloudinary:", result);
+                  resolve({
+                    url: result.secure_url,
+                    public_id: result.public_id
+                  });
+                }
+              );
+              streamifier.createReadStream(file.buffer).pipe(uploadStream);
+            });
+          })
+        );
+  
+        console.log("Imagenes subidas correctamente:", imageUrls);
+        ultimateImages = [...imageUrls]; // Reemplazamos las imágenes anteriores por las nuevas
+      } catch (err) {
+        console.log("Error al subir imágenes a Cloudinary:", err);
+        return res.status(500).json({ message: "Error al subir imágenes" });
+      }
+    }
+  
+    ultimateImages = ultimateImages.filter(img => img && img.url && img.public_id);
+  
+    const updatedCake = {
+      nombre,
+      tamano,
+      rinde,
+      descripcion,
+      categoria,
+      precio,
+      imagenes: ultimateImages,
+    };
+  
+    try {
+      const updatedCakeDoc = await CakeModel.findOneAndUpdate({ _id }, updatedCake, { new: true });
+      res.status(200).json({ message: 'Producto actualizado con éxito', updatedCake: updatedCakeDoc });
+    } catch (error) {
+      console.log("Error al actualizar el producto:", error);
+      res.status(500).json({ message: 'Error al actualizar el producto' });
+    }
+  },
+  
     
 delete: async(req, res)=>{
      const _id = req.params.id
