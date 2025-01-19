@@ -15,7 +15,7 @@ const Detail = ({data}) => {
                         <div className="detail-img-info1">
                             <img src={imagenes[0]?.url} alt="" className='detail-img1' />
                             <div className="detail-info1">
-                            <p>Categoria: {categoria}</p>
+                            <p className='detail-title'>{nombre}</p>
                             <p>Rinde: {rinde} porciones.</p>
                             </div>
                         </div>
@@ -29,9 +29,11 @@ const Detail = ({data}) => {
                         </div>
                 </div>
                     <div className="detail-title-price-container">
-                        <p>{nombre}</p>
-                        {precio && <PaidIcon fontSize='large' className='detail-icon'/>}
-                        {precio ? <p>$ {precio}</p> : <p className='no-price'>Consultar precio</p>}
+                        <ul>
+                        {precio && <li><PaidIcon fontSize='large' className='detail-icon'/></li>}
+                        {precio ? <li><p>$ {precio}</p></li> : <li><p className='no-price'>Consultar precio</p></li>}
+                        {tamano && <li><p>Consultar por otros tamaños</p></li>}
+                        </ul>
                     </div>
                     </div>
                     :
