@@ -13,10 +13,10 @@ const Detail = ({data}) => {
                     <div className="detail-container-inside">
                     <div className="detail-img-info-container">
                         <div className="detail-img-info1">
-                            <img src={imagenes[0]?.url} alt="" className='detail-img' />
+                            <img src={imagenes[0]?.url} alt="" className='detail-img1' />
                             <div className="detail-info1">
                             <p>Categoria: {categoria}</p>
-                            <p>Rinde: {rinde} personas.</p>
+                            <p>Rinde: {rinde} porciones.</p>
                             </div>
                         </div>
                         <div className="detail-img-info2">
@@ -25,13 +25,13 @@ const Detail = ({data}) => {
                            {tamano ? <p>Tamaño: {tamano} cm.</p> : <p>Consultar tamaño</p>}   
                             <p>Descripcion: {descripcion}</p>
                             </div>
-                            <img src={imagenes[1]?.url} alt="" className='detail-img' />
+                            <img src={imagenes[1]?.url} alt="" className='detail-img2' />
                         </div>
                 </div>
                     <div className="detail-title-price-container">
                         <p>{nombre}</p>
-                        <PaidIcon fontSize='large' className='detail-icon'/>
-                        <p>$ {precio}</p>
+                        {precio && <PaidIcon fontSize='large' className='detail-icon'/>}
+                        {precio ? <p>$ {precio}</p> : <p className='no-price'>Consultar precio</p>}
                     </div>
                     </div>
                     :

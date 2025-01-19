@@ -112,7 +112,7 @@ const Add = ({handleImageChange, handleChange, data, handleSubmit, imgsPreview})
             name='tamano'
             label="Tamaño"
             helperText={tamano.length > 0 ? "" : "Agregue el tamaño"}
-            value={categoria === 'torta' || categoria === 'budin' || categoria.length === 0  ? tamano : 404 }
+            value={categoria === 'torta' || categoria === 'budin' || categoria === 'especial' || categoria.length === 0  ? tamano : 404 }
             onChange={handleChange}
             color='primary'
             sx={{

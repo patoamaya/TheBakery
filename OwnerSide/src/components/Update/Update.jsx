@@ -120,7 +120,7 @@ const Update = ({data, handleSubmit, handleImageChange, imgsPreview}) => {
           label="Tamaño"
           type='number'
           helperText={"Agregue el tamaño"}
-          value={tamano  ? tamano : ""}
+          value={categoria === 'torta' || categoria === 'budin' || categoria === 'especial' || categoria.length === 0  ? tamano : 404 }
           onChange={(e)=>setTamano(e.target.value)}
           color='none'
           sx={{

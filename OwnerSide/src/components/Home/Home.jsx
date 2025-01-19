@@ -31,7 +31,7 @@ const Home = ({data, pageData, deleteAlert}) => {
                     </div>
                 :
                 data.map((dato)=>{
-                    let {nombre, imagenes, _id} = dato
+                    let {nombre, imagenes, _id, tamano} = dato
                     return(
                         <div className="card-container" key={_id}>
                     <Link to={`/detail/${_id}`}>
@@ -39,7 +39,8 @@ const Home = ({data, pageData, deleteAlert}) => {
                             <img src={imagenes[0]?.url} alt="" className='card-img' />
                         </div>
                         <div className="card-info">
-                            <h3>{nombre}</h3>  
+                            <h3>{nombre}</h3>
+                           {tamano && <h4>{tamano} cm.</h4>}  
                         </div>
                     </Link>
             <div className="card-links">
