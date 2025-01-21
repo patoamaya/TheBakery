@@ -16,8 +16,8 @@ const Header = () => {
         <div className="header-links">
           <ul>
             <li><Link to="/category"><p>Todos los productos</p></Link></li>
-            <li><a href="#contact"><p>Contacto</p></a></li>
-            <li><a href="#howToBuy"><p>Cómo comprar</p></a></li>
+            <li><a href="/#contact"><p>Contacto</p></a></li>
+            <li><a href="/#howToBuy"><p>Cómo comprar</p></a></li>
           </ul>
         </div>
         </header>
