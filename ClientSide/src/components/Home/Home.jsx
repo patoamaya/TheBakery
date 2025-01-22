@@ -4,6 +4,12 @@ import foto1 from '../../assets/Home-assets/foto1.jpg'
 import foto2 from '../../assets/Home-assets/foto2.jpg'
 import foto3 from '../../assets/Home-assets/foto3.jpg'
 import foto4 from '../../assets/Home-assets/foto4.jpg'
+import foto5 from '../../assets/Home-assets/foto5.jpg'
+import foto7 from '../../assets/Home-assets/foto7.jpg'
+import foto8 from '../../assets/Home-assets/foto8.jpg'
+import fb from '../../assets/logos/fb-logo.png'
+import ig from '../../assets/logos/ig-logo.png'
+import wpp from '../../assets/logos/wpp-logo.png'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
@@ -30,20 +36,46 @@ const Home = () => {
             <h4>Categorias destacadas</h4>
           <div className="home-categories-card-container">
             <div className="home-categories-card">
+              <Link to="/category/torta">
             <img src={foto3} alt="" className='home-card-img'/>
+              </Link>
             <p>Tortas</p>
             </div>
 
           <div className="home-categories-card">
-            <img src={foto2} alt="" className='home-card-img' />
-            <p>Personalizados</p>
+            <Link to="/category/cumpleanos">
+            <img src={foto8} alt="cumpleaños" className='home-card-img' />
+            </Link>
+            <p>Cumpleaños</p>
           </div>
+
           <div className="home-categories-card">
-            <img src={foto3} alt="" className='home-card-img'/>
+            <Link to="/category/budin">
+            <img src={foto7} alt="budines" className='home-card-img'/>
+            </Link>
             <p>Budines</p>
+            </div>
+          <div className="home-categories-card">
+            <Link to="/category/box">
+            <img src={foto5} alt="box" className='home-card-img'/>
+            </Link>
+            <p>Box</p>
             </div>
         </div>
             </div>
+        <div id="contact">
+          <p className="home-contact-title">
+            Contacto
+          </p>
+
+          <ul className='home-logos'>
+            {/* hacer links para cada li correspondiente */}
+            <li><img src={ig} alt="" className='home-logos-logo'/> <p>@joaquinadulce</p></li>
+            <li><img src={fb} alt="" className='home-logos-logo'/><p>Joaquina Dulce</p></li>
+            <li><img src={wpp} alt="" className='home-logos-logo'/> <p>+54 9 1130627969</p></li>
+          </ul>
+        </div>
+        
       </div>
     </main>
   )
