@@ -97,11 +97,11 @@ const Add = ({handleImageChange, handleChange, data, handleSubmit, imgsPreview})
             <MenuItem value = 'sanValentin'>San Valentin</MenuItem>
             <MenuItem value = 'pascua'>Pascua</MenuItem>
             <MenuItem value = 'diaPadre'>Dia del padre</MenuItem>
-            <MenuItem value = 'diaNino'>Dia del niño</MenuItem>
+            <MenuItem value = 'box'>Box</MenuItem>
             <MenuItem value = 'halloween'>Halloween</MenuItem>
             <MenuItem value = 'diaMadre'>Dia de la madre</MenuItem>
             <MenuItem value = 'fechasPatrias'>Fechas patrias</MenuItem>
-            <MenuItem value = 'especial'>Especial</MenuItem>
+            <MenuItem value = 'cumpleanos'>Cumpleaños</MenuItem>
             <MenuItem value = 'catering'>Catering</MenuItem>
             <MenuItem value = 'salado'>Salado</MenuItem>
   
@@ -112,7 +112,7 @@ const Add = ({handleImageChange, handleChange, data, handleSubmit, imgsPreview})
             name='tamano'
             label="Tamaño"
             helperText={tamano.length > 0 ? "" : "Agregue el tamaño"}
-            value={categoria === 'torta' || categoria === 'budin' || categoria === 'especial' || categoria.length === 0  ? tamano : 404 }
+            value={categoria === 'torta' || categoria === 'budin' || categoria === 'cumpleanos' || categoria === 'box' || categoria.length === 0  ? tamano : 404 }
             onChange={handleChange}
             color='primary'
             sx={{

@@ -102,11 +102,11 @@ const Update = ({data, handleSubmit, handleImageChange, imgsPreview}) => {
                 <MenuItem value = 'sanValentin'>San Valentin</MenuItem>
                 <MenuItem value = 'pascua'>Pascua</MenuItem>
                 <MenuItem value = 'diaPadre'>Dia del padre</MenuItem>
-                <MenuItem value = 'diaNino'>Dia del niño</MenuItem>
+                <MenuItem value = 'box'>Box</MenuItem>
                 <MenuItem value = 'halloween'>Halloween</MenuItem>
                 <MenuItem value = 'diaMadre'>Dia de la madre</MenuItem>
                 <MenuItem value = 'fechasPatrias'>Fechas patrias</MenuItem>
-                <MenuItem value = 'especial'>Especial</MenuItem>
+                <MenuItem value = 'cumpleanos'>Cumpleaños</MenuItem>
                 <MenuItem value = 'catering'>Catering</MenuItem>
                 <MenuItem value = 'salado'>Salado</MenuItem>
             </Select>
@@ -120,7 +120,7 @@ const Update = ({data, handleSubmit, handleImageChange, imgsPreview}) => {
           label="Tamaño"
           type='number'
           helperText={"Agregue el tamaño"}
-          value={categoria === 'torta' || categoria === 'budin' || categoria === 'especial' || categoria.length === 0  ? tamano : 404 }
+          value={categoria === 'torta' || categoria === 'budin' || categoria === 'cumpleanos' || categoria === 'box' || categoria.length === 0  ? tamano : 404 }
           onChange={(e)=>setTamano(e.target.value)}
           color='none'
           sx={{
