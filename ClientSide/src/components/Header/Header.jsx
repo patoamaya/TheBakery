@@ -15,7 +15,13 @@ const Header = () => {
         </div>
         <div className="header-links">
           <ul>
-            <li><Link to="/category"><p>Todos los productos</p></Link></li>
+            {/* <li><p>Productos</p></li> */}
+            <li>
+              <label htmlFor="select">Productos</label>
+              <select name="" id="select">
+                <option value="">Todos</option>
+              </select>
+            </li>
             <li><a href="/#contact"><p>Contacto</p></a></li>
             <li><a href="/#howToBuy"><p>Cómo comprar</p></a></li>
           </ul>
