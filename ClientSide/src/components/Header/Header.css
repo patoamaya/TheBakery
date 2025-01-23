@@ -46,6 +46,29 @@
   padding-top: 2.1rem;
 }
 
+.header-select{
+  height: 2rem;
+  font-size: 1.3rem;
+  background-color: transparent;
+  border: none;
+  color: rgb(235, 211, 211);
+}
+
+.header-select:hover{
+  color: white;
+    border-bottom:4px solid  #ffa8d3;
+    border-radius: .4rem;
+    /* transform: scale(1.1); */
+    /* transition: ease-in-out .2s; */
+}
+
+.header-select option{
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(240, 119, 119);
+}
+
+
+
 .header-links a p{
   color: rgb(235, 211, 211);
   font-size: 1.3rem;
@@ -58,9 +81,5 @@
     transform: scale(1.1);
     transition: ease-in-out .2s;
 }
-
-
-
-
 
 /* Encargarse de la autenticacion de un usuario */
