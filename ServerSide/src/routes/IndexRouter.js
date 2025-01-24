@@ -7,6 +7,8 @@ router.get('/', IndexController.home)
 
 router.get('/all', IndexController.all)
 
+router.get('/q', IndexController.q)
+
 router.get('/detail/:id', IndexController.detail)
 
 

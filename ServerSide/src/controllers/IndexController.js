@@ -29,6 +29,20 @@ all: async(req, res)=>{
     }
 
 },
+
+q: async(req, res) =>{
+    try{
+    const {categoria} = req.query
+    const filteredCategory = await CakeModel.find({categoria: categoria})
+    console.log(filteredCategory)
+    res.send(filteredCategory)
+    }catch(err){
+        res.status(400).json({
+            message: `Error al encontrar esta categoria`,
+            error: err
+        })
+    }
+},
 detail: async(req, res)=>{
     try{
         let {id} = req.params
