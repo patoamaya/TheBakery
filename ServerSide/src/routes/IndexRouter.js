@@ -3,9 +3,7 @@ const IndexController = require('../controllers/IndexController')
 const router = express.Router()
 
 // Vistas de cliente
-router.get('/', IndexController.home)
-
-router.get('/all', IndexController.all)
+router.get('/', IndexController.all)
 
 router.get('/q', IndexController.q)
 

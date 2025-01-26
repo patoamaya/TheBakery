@@ -2,24 +2,24 @@ const CakeModel = require("../models/CakeModel")
 
 
 const IndexController = {
-home: async(req, res)=>{
-    try{
-        const findAll = await CakeModel.find()
-        res.send(findAll)
-    }catch(err){
-        res.status(400) || res.status(500)
-        .json({
-            message: `Productos no encontrados`,
-            error: err
-        })
-    }
-},
+
 all: async(req, res)=>{
+    const page = parseInt(req.query.page) || 1
+    const limit = parseInt(req.query.limit) || 9
+
     try{
         const searchAll = await CakeModel.find()
-        res.status(200) && res.send(searchAll)
-    }
-    catch(err) {
+        .skip((page-1) * limit)
+        .limit(limit)
+
+        const totalCakes = await CakeModel.countDocuments()
+
+        res.json({
+            searchAll,
+            totalPages: Math.ceil(totalCakes / limit),
+            currentPage: (page)
+        })
+    }catch(err) {
         console.error(`Error: ${err}`)
         res.status(500).json({
             message: `Error al encontrar productos`,
@@ -31,11 +31,23 @@ all: async(req, res)=>{
 },
 
 q: async(req, res) =>{
+    const page = parseInt(req.query.page) || 1
+    const limit = parseInt(req.query.limit) || 9
+
     try{
     const {categoria} = req.query
+
     const filteredCategory = await CakeModel.find({categoria: categoria})
-    console.log(filteredCategory)
-    res.send(filteredCategory)
+    .skip((page-1) * limit)
+    .limit(limit)
+    
+    const totalCakes = await CakeModel.countDocuments()
+
+    res.json({
+        filteredCategory,
+        totalPages: Math.ceil(totalCakes / limit),
+        currentPage: (page)
+    })
     }catch(err){
         res.status(400).json({
             message: `Error al encontrar esta categoria`,
