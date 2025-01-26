@@ -1,7 +1,117 @@
-.sasa{
-    padding-top: 10rem;
+.list-container-all{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    background-image: url('../../assets/background.jpg');
+    padding-top: 7.5rem;
+
 }
 
-.saso{
-    padding-top: 10rem;
+.list-container{
+    background-color: rgba(253, 150, 150, 0.473);
+    border-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 96%;
+    min-height: 50vh;
+    height: fit-content;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.list-card-container{
+    display: flex;
+    height: 11rem;
+    width: 25rem;
+    border-radius: 1rem;
+    background-color: rgba(211, 90, 90, 0.24);
+    border: 1px solid white;
+}
+
+.list-card-container:hover{
+    transform: scale(1.05);
+    transition: .4s;
+}
+
+
+.list-card-img{
+    margin: .5rem;
+    border-radius: .5rem;
+    object-fit: cover;
+    width: 200px;
+    height: 160px;
+    filter: opacity(95%);
+}
+
+.list-card-info{
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 1.3rem;
+}
+
+.list-card-info ul li{
+    margin-top: .5rem;
+}
+
+.list-card-title{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.list-card-price{
+    font-size: 1.2rem;
+    font-weight: 600;
+    /* margin-top: 5rem; */
+}
+
+.list-btns-container{
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.disabled{
+    display: hidden;
+}
+
+.list-page-container{
+    align-self: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    display: flex;
+}
+
+.loader{
+    display: flex;
+    flex-direction: column;
+    margin: 15% 40%;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.loader p{
+    margin-top:-2rem;
+    color: antiquewhite;
+    font-size: 2rem;
+}
+
+.list-no-data{
+    color: white;
+    border-bottom: 2px solid white;
+    font-size: 4rem;
 }

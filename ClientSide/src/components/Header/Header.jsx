@@ -3,7 +3,7 @@ import './Header.css'
 import { Link, Outlet } from 'react-router-dom'
 import logo from '../../assets/logos/page-logo.png'
 
-const Header = ({ handleSelectChange}) => {
+const Header = ({ handleSelectChange, location}) => {
   return (
     <div>
       <header className="header-container">
@@ -16,7 +16,7 @@ const Header = ({ handleSelectChange}) => {
           <ul>
             <li>
               <select name="" id="" className='header-select' 
-                onChange={handleSelectChange}>
+                onChange={handleSelectChange} value={location.pathname === "/" && ""}>
                 <option value="">Categorias</option>
                 <option value="all">Todo</option>
                 <option value="torta">Tortas</option>

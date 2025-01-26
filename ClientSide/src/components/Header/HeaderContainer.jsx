@@ -1,8 +1,8 @@
 import Header from './Header'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 const HeaderContainer = () => {
-  
+  const location = useLocation()
   const navigate = useNavigate()
 
   const handleSelectChange = (e)=>{
@@ -18,7 +18,7 @@ const HeaderContainer = () => {
 
 
 return (
-    <div><Header handleSelectChange={handleSelectChange}/></div>
+    <div><Header handleSelectChange={handleSelectChange} location={location}/></div>
   )
 }
 

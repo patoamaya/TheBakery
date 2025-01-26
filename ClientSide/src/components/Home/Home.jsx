@@ -93,7 +93,6 @@ const Home = () => {
             <Link to="https://w.app/joaquinadulce" target='blank'><li><img src={wpp} alt="" className='home-logos-logo'/> <p>+54 9 1130627969</p></li></Link>
           </ul>
         </div>
-        
       </div>
     </main>
   )
