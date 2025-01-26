@@ -4,7 +4,7 @@ import PaidIcon from '@mui/icons-material/Paid';
 import {Hearts} from 'react-loader-spinner'
 
 const Detail = ({data}) => {
-    const {nombre, categoria, imagenes, descripcion, rinde, precio, tamano } = data  
+    const {nombre, imagenes, descripcion, rinde, precio, tamano } = data  
     return (
         <div className='detail-container-all'>
             <div className="detail-container">

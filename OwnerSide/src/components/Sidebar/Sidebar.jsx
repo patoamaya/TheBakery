@@ -13,15 +13,15 @@ const Sidebar = () => {
                 <li><Link to="/" className='sidebar-link'>Todo</Link></li>
                 <li><Link to="/category/torta" className='sidebar-link'>Tortas</Link></li>
                 <li><Link to="/category/budin" className='sidebar-link'>Budines</Link></li>
+                <li><Link to="/category/box" className='sidebar-link'>Box</Link> </li>
             </ul>
             <p className='sidebar-title'>Especiales</p>
             <ul className="sidebar-ul2">
+                <li><Link to="/category/miniPasteleria" className='sidebar-link'>Mini pasteleria</Link> </li>
                 <li><Link to="/category/navidad" className='sidebar-link'>Navidad</Link> </li>
                 <li><Link to="/category/sanValentin" className='sidebar-link'>San Valentin</Link> </li>
                 <li><Link to="/category/pascua" className='sidebar-link'>Pascua</Link> </li>
                 <li><Link to="/category/diaPadre" className='sidebar-link'>Dia del padre</Link> </li>
-                <li><Link to="/category/box" className='sidebar-link'>Box</Link> </li>
-                <li><Link to="/category/halloween" className='sidebar-link'>Halloween</Link> </li>
                 <li><Link to="/category/diaMadre" className='sidebar-link'>Dia de la madre</Link> </li>
                 <li><Link to="/category/fechasPatrias" className='sidebar-link'>Fechas patrias</Link> </li>
                 <li><Link to="/category/cumpleanos" className='sidebar-link'>Cumpleaños</Link> </li>

@@ -93,12 +93,12 @@ const Add = ({handleImageChange, handleChange, data, handleSubmit, imgsPreview})
             >
             <MenuItem value = 'torta'>Torta</MenuItem>
             <MenuItem value = 'budin'>Budin</MenuItem>
+            <MenuItem value = 'box'>Box</MenuItem>
+            <MenuItem value = 'miniPasteleria'>Mini pasteleria</MenuItem>
             <MenuItem value = 'navidad'>Navidad</MenuItem>
             <MenuItem value = 'sanValentin'>San Valentin</MenuItem>
             <MenuItem value = 'pascua'>Pascua</MenuItem>
             <MenuItem value = 'diaPadre'>Dia del padre</MenuItem>
-            <MenuItem value = 'box'>Box</MenuItem>
-            <MenuItem value = 'halloween'>Halloween</MenuItem>
             <MenuItem value = 'diaMadre'>Dia de la madre</MenuItem>
             <MenuItem value = 'fechasPatrias'>Fechas patrias</MenuItem>
             <MenuItem value = 'cumpleanos'>Cumpleaños</MenuItem>

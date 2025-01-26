@@ -41,7 +41,6 @@
 }
 
 .no-data{
-    /* color: red; */
     display: flex;
     border-bottom: 2px solid red;
     margin: 15rem auto;
@@ -115,6 +114,7 @@
     border-bottom-left-radius: .5rem;
     margin-top: .2rem;
     margin-left: .1rem;
+    object-fit:fill;
 
 
 }

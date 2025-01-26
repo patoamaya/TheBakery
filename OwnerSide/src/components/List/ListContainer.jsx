@@ -16,6 +16,7 @@ const ListContainer = () => {
         .catch((err)=> console.log(err))
     }
 ,[categoria])
+
 const deleteAlert = (id, nombre)=>{
     Swal.fire({
         icon: "warning",

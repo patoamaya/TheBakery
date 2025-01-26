@@ -1,14 +1,15 @@
 import React from 'react'
-// import './list.css'
 import '../Home/Home.css'
 import {Link} from 'react-router-dom'
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
+import UseCaps from '../../utils/useCaps';
 
 const List = ({data, deleteAlert}) => {
+    let {useCaps} = UseCaps()
     return (
         <div className='home-container'>
-            <h1 className='home-title'>{data[0]?.categoria}</h1>
+            <h1 className='home-title'>{data.length != 0 && useCaps(data[0]?.categoria)}</h1>
 
         <div className='all-cards-container'>
             {
@@ -18,7 +19,7 @@ const List = ({data, deleteAlert}) => {
                 </div> 
                 :
                 data.map((dato)=>{
-                    let {nombre, imagenes, categoria, _id} = dato
+                    let {nombre, imagenes, _id} = dato
                     return(
                         <div className="card-container" key={_id}>
                         <Link to={`/detail/${_id}`}>

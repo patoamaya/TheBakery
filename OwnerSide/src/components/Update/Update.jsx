@@ -103,7 +103,7 @@ const Update = ({data, handleSubmit, handleImageChange, imgsPreview}) => {
                 <MenuItem value = 'pascua'>Pascua</MenuItem>
                 <MenuItem value = 'diaPadre'>Dia del padre</MenuItem>
                 <MenuItem value = 'box'>Box</MenuItem>
-                <MenuItem value = 'halloween'>Halloween</MenuItem>
+                <MenuItem value = 'miniPasteleria'>Mini pasteleria</MenuItem>
                 <MenuItem value = 'diaMadre'>Dia de la madre</MenuItem>
                 <MenuItem value = 'fechasPatrias'>Fechas patrias</MenuItem>
                 <MenuItem value = 'cumpleanos'>Cumpleaños</MenuItem>
