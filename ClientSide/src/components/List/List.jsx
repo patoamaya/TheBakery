@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './List.css'
 import Button from '@mui/material/Button'
 import {Hearts} from 'react-loader-spinner'
+import { Link } from 'react-router-dom'
 
 
 const List = ({filteredData, pageData}) => {
@@ -31,6 +32,7 @@ const List = ({filteredData, pageData}) => {
         filteredData.map((data)=>{
           let {nombre, tamano, imagenes, precio, _id, categoria} = data
           return(
+            <Link to={`/detail/${_id}`}>
             <div className="list-card-container" key={_id}>
               <div className="list-card-img-container">
               <img src={imagenes[0].url} alt="" className='list-card-img' />
@@ -41,18 +43,19 @@ const List = ({filteredData, pageData}) => {
               {
                 tamano &&
                 <li><p>{tamano} cm.</p></li>
-
+                
               }
               </ul>
               {
                 precio
-                 ?
+                ?
                 <p className='list-card-price'>$ {precio.toLocaleString()}</p>
                 :
                 <p>Consultar precio</p>
               }
               </div>
             </div>
+              </Link>
           )})
         :
           <p className="list-no-data">

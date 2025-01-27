@@ -5,7 +5,12 @@ const Footer = () => {
   return (
     <div>
       <Outlet/>
-      <h2>footer</h2>
+      <div className="footer-container-all">
+        <div className="footer-contact">
+        <p>Creado por: Patricio Amaya</p>
+        <p>---link a mis redes---</p>
+        </div>
+      </div>
       </div>
   )
 }

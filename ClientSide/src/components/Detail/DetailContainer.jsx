@@ -5,12 +5,12 @@ import axios from 'axios'
 
 const DetailContainer = () => {
     const [data, setData] = useState({})
-    const {_id} = useParams()
+    const {id} = useParams()
     useEffect(()=>{
-        axios.get(`http://localhost:2000/detail/${_id}`)
+        axios.get(`http://localhost:2000/detail/${id}`)
         .then((res)=>setData(res.data))
         .catch((err)=>console.log(err))
-    },[_id])
+    },[id])
     return (
         <div>
             <Detail data={data}/>
