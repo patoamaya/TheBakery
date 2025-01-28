@@ -6,7 +6,7 @@
               mask: var(--mask);
     background-color: rgb(241, 117, 169);
     width: 100%;
-    height: 9rem;
+    height: 8.4rem;
     position:fixed;
     display: flex;
     gap: 3rem;
@@ -16,12 +16,11 @@
 
 .logo-container{
   width: 2rem;
-  height: 1rem;
   padding: .3rem;
 }
 
 .logo{
-  width: 80px;
+  width: 5rem;
   padding: .2rem;
 }
 
@@ -49,6 +48,7 @@
 .header-select{
   height: 2rem;
   font-size: 1.3rem;
+  cursor: pointer;
   background-color: transparent;
   border: none;
   color: rgb(235, 211, 211);
@@ -58,7 +58,6 @@
   color: white;
     border-bottom:4px solid  #ffa8d3;
     border-radius: .4rem;
-    /* transform: scale(1.1); */
     transition: ease-in-out .2s;
 }
 
