@@ -39,7 +39,7 @@ const Home = ({data, pageData, deleteAlert}) => {
                             <img src={imagenes[0]?.url} alt="" className='card-img' />
                         </div>
                         <div className="card-info">
-                            <h3>{nombre}</h3>
+                            <p className='card-name'>{nombre}</p>
                            {tamano && <h4>{tamano} cm.</h4>}  
                         </div>
                     </Link>

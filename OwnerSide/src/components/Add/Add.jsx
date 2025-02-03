@@ -111,7 +111,7 @@ const Add = ({handleImageChange, handleChange, data, handleSubmit, imgsPreview})
             className='add-input'
             name='tamano'
             label="Tamaño"
-            helperText={tamano.length > 0 ? "" : "Agregue el tamaño"}
+            helperText={tamano && tamano.length > 0 ? "" : "Agregue el tamaño"}
             value={categoria === 'torta' || categoria === 'budin' || categoria === 'cumpleanos' || categoria === 'box' || categoria.length === 0  ? tamano : 404 }
             onChange={handleChange}
             color='primary'

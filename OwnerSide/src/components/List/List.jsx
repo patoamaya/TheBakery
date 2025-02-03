@@ -27,7 +27,7 @@ const List = ({data, deleteAlert}) => {
                                 <img src={imagenes[0]?.url} alt="" className='card-img' />
                             </div>
                             <div className="card-info">
-                                <h3>{nombre}</h3>  
+                            <p className='card-name'>{nombre}</p>
                             </div>
                         </Link>
                 <div className="card-links">
