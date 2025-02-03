@@ -63,7 +63,7 @@ const List = ({filteredData, pageData}) => {
           </p>
         }
       </div>
-      <div className={loading ? "disabled" : "list-page-container"}>
+      <div className={loading || filteredData.length === 0 ? "disabled" : "list-page-container"}>
         <Button variant="contained" color="secondary" onClick={()=>{handlePageChange(currentPage - 1)}}disabled={currentPage === 1}>
         anterior
         </Button>

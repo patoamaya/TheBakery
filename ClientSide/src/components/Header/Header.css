@@ -45,6 +45,8 @@
   padding-top: 2.1rem;
 }
 
+
+
 .header-select{
   height: 2rem;
   font-size: 1.3rem;
@@ -81,4 +83,6 @@
     transition: ease-in-out .2s;
 }
 
+
+a{text-decoration: none;}
 /* Encargarse de la autenticacion de un usuario */
