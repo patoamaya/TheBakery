@@ -10,7 +10,7 @@ const Home = ({data, pageData, deleteAlert}) => {
     let {handlePageChange, currentPage, totalPages, loading} = pageData
     return (
         <main className='home-container'>
-            <h1 className='home-title'>Todos los productos</h1>
+            <h1 className='home-title'>Todos</h1>
 
         <div className='all-cards-container'>
             {
