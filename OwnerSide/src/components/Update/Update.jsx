@@ -220,7 +220,7 @@ const Update = ({data, handleSubmit, handleImageChange, imgsPreview}) => {
           Cancelar
         </Button>
         </Link>
-        {imgsPreview.length > 2 ? <h2 className='error-btn-'>Límite de imagenes excedido</h2> : <Button variant="contained" color="primary" type='submit' className='submit-btn' >
+        {imgsPreview.length > 2 ?  <Button className='disabled-'/> : <Button variant="contained" color="primary" type='submit' className='submit-btn' >
           Actualizar producto
         </Button>}
         </div>

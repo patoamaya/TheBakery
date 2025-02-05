@@ -61,13 +61,15 @@
     border-bottom-left-radius: .3rem;
     border-bottom-right-radius: .3rem;
     background-color: rgba(116, 116, 116, 0.329);
-    box-shadow: rgba(41, 40, 40, 0.185) .2rem .25rem;
+    box-shadow: #807e7e .2rem .1rem;
     margin-top: 2rem;
 }
 
 .card-container:hover {
     transform:scale(1.05, 1.05);
     transition: .3s;
+    box-shadow: rgba(0, 0, 0, 0.726) .4rem .3rem;
+
 
 }
 
@@ -115,7 +117,6 @@
 .card-img{
     width: 220px;
     height: 180px;
-    padding-top: .1rem;
     border-top-left-radius: 1.8rem;
     border-top-right-radius: 1.8rem;
     border-bottom-right-radius: .5rem;
@@ -150,14 +151,11 @@
         padding-left: .2rem;
     }
 
-    .all-cards-container{
-        justify-content: center;
-        margin: auto auto;
-        /* background-color: red; */
-    }
-
     .home-title{
         border-bottom: none;
-        /* margin-left: 4.5rem; */
+    }
+
+    .card-container{
+       padding-bottom: .5rem;
     }
 }

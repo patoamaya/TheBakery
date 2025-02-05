@@ -177,10 +177,14 @@ margin-left: 1rem;
 }
 
 .disabled{
-display: none;
+    display: none;
 }
 
-@media only screen and (min-width: 120px) and (max-width: 460px) {
+@media only screen and (min-width: 120px) and (max-width: 480px) {
+    .add-container{
+        height: 160vh;
+    }
+    
     .add-back-btn{
         display:none;
    }
@@ -206,4 +210,20 @@ display: none;
         justify-content: center;
     }
     
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1279px) {
+    .add-container{
+        height: 240vh;
+    }
+    .preview-container{
+        height: 10rem;
+        margin-top: -1rem;
+        padding-bottom: 3rem;
+            
+    }
+
+    .btns-container{
+        
+    }
 }

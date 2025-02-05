@@ -1,6 +1,5 @@
 import React from 'react'
 import './Detail.css'
-import PaidIcon from '@mui/icons-material/Paid';
 import {Hearts} from 'react-loader-spinner'
 
 const Detail = ({data}) => {
@@ -30,7 +29,6 @@ const Detail = ({data}) => {
                 </div>
                     <div className="detail-title-price-container">
                         <ul>
-                        {precio && <li><PaidIcon fontSize='large' className='detail-icon'/></li>}
                         {precio ? <li><p>$ {precio}</p></li> : <li><p className='no-price'>Consultar precio</p></li>}
                         {tamano && <li><p>Consultar por otros tamaños</p></li>}
                         </ul>
