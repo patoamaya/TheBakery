@@ -7,7 +7,7 @@ const OwnerController = {
 
 home: async(req, res)=>{
     const page = parseInt(req.query.page) || 1;
-    const limit = parseInt(req.query.limit) || 8;
+    const limit = parseInt(req.query.limit) || 6;
     try{
         const findAll = await CakeModel.find()
         .skip((page-1) * limit)

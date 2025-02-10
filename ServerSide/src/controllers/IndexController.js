@@ -5,7 +5,7 @@ const IndexController = {
 
 all: async(req, res)=>{
     const page = parseInt(req.query.page) || 1
-    const limit = parseInt(req.query.limit) || 9
+    const limit = parseInt(req.query.limit) || 6
 
     try{
         const searchAll = await CakeModel.find()
@@ -32,7 +32,7 @@ all: async(req, res)=>{
 
 q: async(req, res) =>{
     const page = parseInt(req.query.page) || 1
-    const limit = parseInt(req.query.limit) || 9
+    const limit = parseInt(req.query.limit) || 6
 
     try{
     const {categoria} = req.query
