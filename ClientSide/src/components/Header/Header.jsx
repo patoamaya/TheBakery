@@ -40,6 +40,29 @@ const Header = ({ handleSelectChange, location}) => {
           </ul>
         </div>
         </header>
+        <div className="header-mobile">
+        <select name="" id="" className='mobile-header-category-select' 
+                onChange={handleSelectChange} value={location.pathname === "/" && ""}>
+                <option value="">Categorias</option>
+                <option value="all">Todo</option>
+                <option value="torta">Tortas</option>
+                <option value="budin">Budines</option>
+                <option value="box">Box de tortas</option>
+                <option value="miniPasteleria">Mini pasteleria</option>
+                <option value="navidad">Navidad</option>
+                <option value="sanValentin">San Valentin</option>
+                <option value="pascua">Pascua</option>
+                <option value="diaPadre">Dia del padre</option>
+                <option value="diaMadre">Dia de la madre</option>
+                <option value="fechasPatrias">Fechas patrias</option>
+                <option value="cumpleanos">Cumpleaños</option>
+                <option value="catering">Catering</option>
+                <option value="salado">Salados</option>
+              </select>
+          <Link to="/">
+          <img src={logo} className='mobile-logo'/>
+          </Link>
+        </div>
       <Outlet/>
     </div>
   )

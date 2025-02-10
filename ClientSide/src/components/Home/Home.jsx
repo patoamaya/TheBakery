@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Home.css'
 import foto1 from '../../assets/Home-assets/foto1.jpg'
 import foto2 from '../../assets/Home-assets/foto2.jpg'
@@ -16,11 +16,31 @@ import fb from '../../assets/logos/fb-logo.png'
 import ig from '../../assets/logos/ig-logo.png'
 import wpp from '../../assets/logos/wpp-logo.png'
 import { Link } from 'react-router-dom'
+import Carousel from 'react-bootstrap/Carousel';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
-const Home = () => {
+const Home = ({handleSelect, index}) => {
+
   return (
     <main className='home-container-all'>
       <div className="home-container">
+            <div className="best-categories-carousel">
+              <p>Categorias destacadas </p>
+                <Carousel activeIndex={index} onSelect={handleSelect} interval={8000}>
+                    <Carousel.Item >
+                        <Link to="/category/torta"><img src={foto3} alt="" className='carousel-img'/></Link>
+                    </Carousel.Item>
+                    <Carousel.Item >
+                        <Link to="/category/cumpleanos"><img src={foto8} alt="" className='carousel-img'/></Link>
+                    </Carousel.Item>
+                    <Carousel.Item >
+                        <Link to="/category/budin"><img src={foto7} alt="" className='carousel-img'/></Link>
+                    </Carousel.Item>
+                    <Carousel.Item >
+                        <Link to="/category/box"><img src={foto5} alt="" className='carousel-img'/></Link>
+                    </Carousel.Item>
+                </Carousel>
+            </div>
       <div className="best-categories">
             <h4>Categorias destacadas</h4>
           <div className="home-categories-card-container">
@@ -30,6 +50,7 @@ const Home = () => {
               </Link>
             <p>Tortas</p>
             </div>
+
 
           <div className="home-categories-card">
             <Link to="/category/cumpleanos">
@@ -63,6 +84,49 @@ const Home = () => {
         </div>
 
     
+        
+        <div className="gallery-mobile">
+        <p className="gallery-title">Galeria de productos</p>
+
+        <Carousel interval={4000}>
+            <Carousel.Item >
+                <img src={foto2} alt="" className='carousel-img'/>
+            </Carousel.Item>
+            <Carousel.Item >
+                <img src={foto12} alt="" className='carousel-img'/>
+            </Carousel.Item>
+            <Carousel.Item >
+                <img src={foto3} alt="" className='carousel-img'/>
+            </Carousel.Item>
+            <Carousel.Item >
+                <img src={foto11} alt="" className='carousel-img'/>
+            </Carousel.Item>
+            <Carousel.Item >
+                <img src={foto1} alt="" className='carousel-img'/>
+            </Carousel.Item>
+            <Carousel.Item >
+                <img src={foto9} alt="" className='carousel-img'/>
+            </Carousel.Item>
+            <Carousel.Item >
+                <img src={foto4} alt="" className='carousel-img'/>
+            </Carousel.Item>
+            <Carousel.Item >
+                <img src={foto5} alt="" className='carousel-img'/>
+            </Carousel.Item>
+            <Carousel.Item >
+                <img src={foto7} alt="" className='carousel-img'/>
+            </Carousel.Item>
+            <Carousel.Item >
+                <img src={foto6} alt="" className='carousel-img'/>
+            </Carousel.Item>
+            <Carousel.Item >
+                <img src={foto8} alt="" className='carousel-img'/>
+            </Carousel.Item>
+            <Carousel.Item >
+                <img src={foto10} alt="" className='carousel-img'/>
+            </Carousel.Item>
+        </Carousel>
+        </div>
 
         <div id="gallery">
           <p className="gallery-title">Galeria de productos</p>
@@ -79,7 +143,6 @@ const Home = () => {
               <img src={foto6} alt="" className='gallery-img'/>
               <img src={foto8} alt="" className='gallery-img'/>
               <img src={foto10} alt="" className='gallery-img'/>
-
             </div>
         </div>
         <div id="contact">
@@ -90,7 +153,7 @@ const Home = () => {
           <ul className='home-logos'>
            <Link to="https://www.instagram.com/joaquina.dulce/" target='blank'><li><img src={ig} alt="" className='home-logos-logo'/> <p>@joaquina.dulce</p></li></Link>
             <Link to="https://www.facebook.com/joaquina.dulce.3" target='blank'><li><img src={fb} alt="" className='home-logos-logo'/><p>Joaquina Dulce</p></li></Link>
-            <Link to="https://w.app/joaquinadulce" target='blank'><li><img src={wpp} alt="" className='home-logos-logo'/> <p>+54 9 1130627969</p></li></Link>
+            <Link to="https://wa.me/1130627969" target='blank'><li><img src={wpp} alt="" className='home-logos-logo'/> <p>+54 9 1130627969</p></li></Link>
           </ul>
         </div>
       </div>

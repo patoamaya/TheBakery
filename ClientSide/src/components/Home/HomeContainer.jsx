@@ -1,9 +1,14 @@
-import React from 'react'
+import { useState } from 'react'
 import Home from './Home'
 
 const HomeContainer = () => {
+  const [index, setIndex] = useState(0)
+
+  const handleSelect = (selectedIndex)=>{
+    setIndex(selectedIndex)
+  }
   return (
-    <div><Home/></div>
+    <div><Home handleSelect={handleSelect} index={index}/></div>
   )
 }
 

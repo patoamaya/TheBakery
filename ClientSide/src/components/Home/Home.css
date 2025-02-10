@@ -13,7 +13,6 @@
     width: 98%;
     height: 98%;
     background-color: rgba(247, 195, 195, 0.603);
-    /* background-color: transparent; */
     border-radius: 1.5rem;
 }
 
@@ -23,6 +22,11 @@
     margin-bottom: 2rem;
     margin-top: 1rem;
 }
+
+.best-categories-carousel{
+    display: none;
+}
+
 .best-categories h4{
     font-weight: 500;
     font-size: 1.6rem;
@@ -36,7 +40,7 @@
     display: flex;
     width: 100%;
     margin-top: 2rem;
-    margin-left: .3rem;
+    margin-left: .7rem;
 
 }
 
@@ -47,7 +51,7 @@
 }
 
 .home-card-img{
-    width: 320px;
+    width: 300px;
     height: 360px;
     border-radius: .5rem;
     filter: opacity(90%);
@@ -103,6 +107,9 @@
     margin-bottom: 2rem;
 }
 
+.gallery-mobile{
+    display: none;
+}
 
 #gallery{
     display: flex;
@@ -156,12 +163,9 @@
 
 .home-logos{
     display: flex;
-    /* flex-direction: column; */
     gap: 5rem;
-    /* margin-left: 3rem; */
     justify-content: center;
     margin-bottom: 3rem;
-    /* align-items: center; */
 }
 
 .home-logos-logo{
@@ -184,4 +188,177 @@
     color: rgb(196, 79, 98);
     font-weight: 700;
 }
+
+@media only screen and (min-width: 250px) and (max-width:480px) {
+    .home-container-all{
+        width: 100%;
+        padding-top: 5rem;
+    }
+
+    .home-container{
+        width: 100%;
+        margin-top: -5.5rem;
+        
+    }
+
+    .best-categories{
+        display: none;
+    }
+
+    .best-categories-carousel{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .best-categories-carousel p{
+        font-weight: 500;
+        font-size: 1.6rem;
+        color: rgb(187, 55, 77);
+        border-bottom: 2px solid rgb(255, 255, 255);
+        margin: auto auto;    
+    }
+
+
+    .carousel-img{
+        width: 300px;
+        height: 400px;
+        margin-top: .8rem;
+        border-radius: .7rem;
+    }
+
+    #gallery{
+        display: none;
+    }
+
+    .gallery-mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+
+    .home-logos{
+        flex-direction: column;
+    }
+
+    #howToBuy h3{
+        margin:0 0;
+        width: fit-content;
+    }
+
+
+}
+
+@media only screen and (min-width: 481px) and (max-width:768px) {
+    .best-categories-carousel{
+        display: none;
+    }
+    
+    .home-container-all{
+        width: 100%;
+        padding-top: 5rem;
+    }
+    
+    .home-container{
+        width: 100%;
+        margin-top: -5.5rem;
+        
+    }
+    
+    .best-categories{
+        width: 100%;
+    }
+    
+    .home-categories-card-container{
+        justify-content: space-evenly;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+    
+    .home-categories-card{
+        width: fit-content;
+    }
+    
+    .home-card-img{
+        width: 255px;
+    }
+    
+    
+    .carousel-img{
+        width: 400px;
+        height: 400px;
+        margin-top: .8rem;
+        border-radius: .7rem;
+    }
+
+
+
+    #gallery{
+        display: none;
+    }
+    
+    .gallery-mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+    
+    .home-logos{
+        flex-direction: column;
+        margin: auto 20%;
+    }
+    
+    #howToBuy h3{
+        margin:0 0;
+        width: fit-content;
+        align-self: center;
+    }
+}
+
+@media only screen and (min-width:769px) and (max-width:1024px) {
+    
+        .best-categories-carousel{
+            display: none;
+        }
+
+        .best-categories{
+            width: 100%;
+            gap: 3rem;
+        }
+
+    
+        .home-categories-card-container{
+            justify-content: space-evenly;
+            gap: 2rem;
+            margin: 0 0;
+            flex-wrap: wrap;
+        }
+
+        .home-categories-card{
+            width: fit-content;
+        }
+
+        .home-logos{
+            gap: 2rem;
+        }
+
+    
+    }
+
+@media only screen and (min-width:1025px) and (max-width:1500px) {
+
+       .home-categories-card-container{
+            flex-wrap: wrap;
+            gap: 2rem;
+       }
+
+       .home-categories-card{
+        width: fit-content;
+       }
+}
+
 
