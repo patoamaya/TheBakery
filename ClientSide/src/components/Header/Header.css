@@ -104,7 +104,7 @@ a {text-decoration: none;}
     mask: var(--mask);
     background-color: rgb(241, 117, 169);
     display: flex;
-    width: 100%;
+    width: 110%;
     height: 10rem;
     gap: 3rem;
     justify-content: space-around;

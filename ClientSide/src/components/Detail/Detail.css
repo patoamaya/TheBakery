@@ -25,7 +25,7 @@
 
 .detail-img{
     width: 100%;
-    object-fit: cover;
+    object-fit:contain;
     height: 24.3rem;
     border-top-left-radius: .8rem;
     border-bottom-left-radius: .8rem;

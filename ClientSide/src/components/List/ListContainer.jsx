@@ -10,7 +10,7 @@ import {useParams} from 'react-router-dom'
   const [totalPages, setTotalPages] = useState(1)
   const [loading, setLoading] = useState(true)
 
-  const productsPerPage = 9;
+  const productsPerPage = 6;
 
    
   useEffect(()=>{
