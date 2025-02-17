@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import './Home.css'
 import foto1 from '../../assets/Home-assets/foto1.jpg'
 import foto2 from '../../assets/Home-assets/foto2.jpg'
@@ -18,6 +17,7 @@ import wpp from '../../assets/logos/wpp-logo.png'
 import { Link } from 'react-router-dom'
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 const Home = ({handleSelect, index}) => {
 

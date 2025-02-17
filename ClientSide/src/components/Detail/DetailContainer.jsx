@@ -6,15 +6,20 @@ import axios from 'axios'
 
 const DetailContainer = () => {
     const [data, setData] = useState({})
+    const [loading, setLoading] = useState(false)
     const {id} = useParams()
     useEffect(()=>{
+        setLoading(true)
         axios.get(`http://localhost:2000/detail/${id}`)
-        .then((res)=>setData(res.data))
+        .then((res)=>{
+            setData(res.data)
+            setLoading(false)
+        })
         .catch((err)=>console.log(err))
     },[id])
     return (
         <div>
-            <Detail data={data}/>
+            <Detail data={data} loading={loading}/>
         </div>
     )
 }

@@ -6,8 +6,7 @@
               mask: var(--mask);
     background-color: rgb(241, 117, 169);
     width: 100%;
-    height: 8.4rem;
-    position:fixed;
+    height: 8.5rem;
     display: flex;
     gap: 3rem;
     z-index: 10000;
@@ -16,7 +15,7 @@
 
 .logo-container{
   width: 2rem;
-  padding: .3rem;
+  padding: .7rem;
 }
 
 .logo{
@@ -51,23 +50,18 @@
   /* height: 2rem; */
   font-size: 1.3rem;
   cursor: pointer;
-  background-color: transparent;
   border: none;
-  color: rgb(235, 211, 211);
+  background-color: rgb(243, 113, 167);
+  color: rgb(235, 211, 211);  
 }
+
 
 .header-select:hover{
-  color: white;
+    color: white;
     border-bottom:4px solid  #ffa8d3;
     border-radius: .4rem;
-    transition: ease-in-out .2s;
+    /* transition: ease-in-out .2s; */
 }
-
-.header-select option{
-  background-color: rgba(0, 0, 0, 0);
-  color: rgb(240, 119, 119);
-}
-
 
 
 .header-links a p{
@@ -104,7 +98,7 @@ a {text-decoration: none;}
     mask: var(--mask);
     background-color: rgb(241, 117, 169);
     display: flex;
-    width: 110%;
+    width: 100%;
     height: 10rem;
     gap: 3rem;
     justify-content: space-around;
