@@ -1,7 +1,7 @@
 
 #  Página web dedicada a negocio gastronómico
 
-Una página orientada a un negocio de pastelería. Consume datos de una API, encontrada en otra página donde pueden realizarse operaciones CRUD.
+Una página web orientada a un negocio de pastelería. Consume datos de una API, encontrada en otra página donde pueden realizarse operaciones CRUD.
 Ambas están creadas con el stack MERN.
 
 
