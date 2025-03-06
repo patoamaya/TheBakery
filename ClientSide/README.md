@@ -13,7 +13,7 @@ Everything made with MERN stack.
 
 ## Screenshots
 
-![Screenshot](https://asset.cloudinary.com/dx4qsxcb7/8daefbde87803d99b85453d948369327)
+![Screenshot](https://asset.cloudinary.com/dx4qsxcb7/8daefbde87803d99b85453d948369327.jpg)
 ![Screenshot](https://asset.cloudinary.com/dx4qsxcb7/f3aad49838e0dec1ee52af5794e006d2)
 ![Screenshot](https://asset.cloudinary.com/dx4qsxcb7/63603826474643bc9cb5fd54dfb5e3f2)
 ![Screenshot](https://asset.cloudinary.com/dx4qsxcb7/f2b462985bc9f90e7526da332cc94545)
