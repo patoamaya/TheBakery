@@ -29,24 +29,18 @@ Everything made with MERN stack.
 Clone the project
 
 ```npm
-  git clone https://github.com/patoamaya/TheBakery.git
-```
-
-Go to the project directory
-
-```npm
-  cd ClientSide
+  git clone https://github.com/patoamaya/TheBakery/tree/main/ClientSide.git
 ```
 
 Install dependencies
 
-```bash
+```npm
   npm install
 ```
 
 Start the server
 
-```bash
+```npm
   npm run dev
 ```
 
