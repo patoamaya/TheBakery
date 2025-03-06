@@ -14,13 +14,15 @@ Everything made with MERN stack.
 ## Screenshots
 
 ![Screenshot](https://asset.cloudinary.com/dx4qsxcb7/8daefbde87803d99b85453d948369327.jpg)
-![Screenshot](https://asset.cloudinary.com/dx4qsxcb7/f3aad49838e0dec1ee52af5794e006d2)
-![Screenshot](https://asset.cloudinary.com/dx4qsxcb7/63603826474643bc9cb5fd54dfb5e3f2)
-![Screenshot](https://asset.cloudinary.com/dx4qsxcb7/f2b462985bc9f90e7526da332cc94545)
-![GIF](https://drive.google.com/file/d/1PIctRl5rEYYEap5nfDhWTso8iYw2RaW5/view?usp=sharing)
-![GIF](https://drive.google.com/file/d/1IUbbD2dwS5d0dGUN-Amb5xuRVIfAt6zo/view?usp=sharing)
-![GIF](https://drive.google.com/file/d/1heJcVnSBHnaKrb9LJ01DPVVOHT9VI61G/view?usp=sharing)
+![Screenshot](https://asset.cloudinary.com/dx4qsxcb7/f3aad49838e0dec1ee52af5794e006d2.jpg)
+![Screenshot](https://asset.cloudinary.com/dx4qsxcb7/63603826474643bc9cb5fd54dfb5e3f2.jpg)
+![Screenshot](https://asset.cloudinary.com/dx4qsxcb7/f2b462985bc9f90e7526da332cc94545.jpg)
 
+## GIFs
+
+![GIF](https://drive.google.com/uc?export=view&id=1PIctRl5rEYYEap5nfDhWTso8iYw2RaW5)
+![GIF](https://drive.google.com/uc?export=view&id=1IUbbD2dwS5d0dGUN-Amb5xuRVIfAt6zo)
+![GIF](https://drive.google.com/uc?export=view&id=1heJcVnSBHnaKrb9LJ01DPVVOHT9VI61G)
 
 ## Run Locally
 
