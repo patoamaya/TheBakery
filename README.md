@@ -16,10 +16,10 @@ The entire application itself is made under the MERN stack (MongoDb, Express, Re
 
 ## Customer side screenshots
 
-![Customer creenshot](https://github.com/patoamaya/TheBakery/blob/main/assets/screenshot-client1.png)
-![Customer creenshot](https://github.com/patoamaya/TheBakery/blob/main/assets/screenshot-client2.png)
-![Customer creenshot](https://github.com/patoamaya/TheBakery/blob/main/assets/screenshot-client3.png)
-![Customer creenshot](https://github.com/patoamaya/TheBakery/blob/main/assets/screenshot-client4.png)
+![Customer Screenshot](https://github.com/patoamaya/TheBakery/blob/main/assets/screenshot-client1.png)
+![Customer Screenshot](https://github.com/patoamaya/TheBakery/blob/main/assets/screenshot-client2.png)
+![Customer Screenshot](https://github.com/patoamaya/TheBakery/blob/main/assets/screenshot-client3.png)
+![Customer Screenshot](https://github.com/patoamaya/TheBakery/blob/main/assets/screenshot-client4.png)
 
 
 ## Customer side GIFs
