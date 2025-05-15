@@ -33,7 +33,6 @@ The entire application itself is made under the MERN stack (MongoDb, Express, Re
 
 ![Owner Screenshot](https://github.com/patoamaya/TheBakery/blob/main/assets/screenshot-owner1.png)
 ![Owner Screenshot](https://github.com/patoamaya/TheBakery/blob/main/assets/screenshot-owner2.png)
-![Owner Screenshot](https://github.com/patoamaya/TheBakery/blob/main/assets/screenshot-owner3.png)
 ![Owner Screenshot](https://github.com/patoamaya/TheBakery/blob/main/assets/screenshot-owner4.png)
 
 
